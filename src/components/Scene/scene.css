@@ -1,0 +1,8 @@
+#renderCanvas {
+    width: 100%;
+    height: 60vh;
+}
+
+.ghostWrapper {
+    text-align: center;
+}
