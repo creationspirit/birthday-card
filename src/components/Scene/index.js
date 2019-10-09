@@ -19,10 +19,17 @@ class Scene extends React.Component {
     correct: false
   }
 
-  pozdravAudio = new Audio(Pozdrav)
-  pitanjeAudio = new Audio(Pitanje)
-  failAudio = new Audio(Fail)
-  correctAudio = new Audio(Tocno)
+  constructor(props) {
+    super(props)
+    if (typeof Audio !== 'undefined') {
+      this.pozdravAudio = new Audio(Pozdrav)
+      this.pitanjeAudio = new Audio(Pitanje)
+      this.failAudio = new Audio(Fail)
+      this.correctAudio = new Audio(Tocno)
+    }
+  }
+
+
 
   ghostRef = React.createRef()
 
